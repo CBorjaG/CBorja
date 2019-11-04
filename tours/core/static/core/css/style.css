@@ -1,0 +1,201 @@
+
+ body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #f2f2f2; 
+	font-size: 1em;
+	line-height: 1.5em;
+ }
+ 
+ h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+ }
+ 
+ p {
+	margin: 0 0 1.5em 0;
+ }
+ 
+   img {
+	max-width: 100%;
+	height: auto;
+   }
+
+    #main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+    }	
+	#main-header a {
+		color: #0b2752;
+	}
+ 
+	#categorias{
+		max-width: 1200px;
+		width: 100%;
+		height: auto; overflow: hidden;
+		border: 0px solid;
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	.uno{
+		width: 355px;
+		height: auto; overflow: hidden;
+		border: 1px solid rgb(255, 255, 255);
+		float: left;
+		padding: 5px;
+		text-align: center;
+		font-size: 13px;
+		color: #0b2752;
+	}
+	
+	.dos{
+		margin-left: 12px;
+		margin-right: 12px;
+		width: 355px;
+		height: auto; overflow: hidden;
+		border: 1px solid rgb(255, 255, 255);
+		float: left;
+		padding: 5px;
+		text-align: center;
+		font-size: 13px;
+		color: #0b2752;
+	}
+	
+	.tres{
+		width: 355px;
+		height: auto; overflow: hidden;
+		border: 1px solid rgb(255, 255, 255);
+		float: left;
+		padding: 5px;
+		text-align: center;
+		font-size: 13px;
+		color: #0b2752;
+	
+	}
+ /*
+ * Logo
+ */
+    #logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+    }
+	#logo-header:hover {
+		color: #C2C2C2;
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
+ 
+ /*
+ * Navegación
+ */
+   nav {
+	float: right;
+   }
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+	nav ul li {
+			display: inline-block;
+			line-height: 80px;
+	}
+			
+	nav ul li a {
+		display: block;
+		padding: 0 10px;
+		text-decoration: none;
+	}
+			
+	nav ul li a:hover {
+		background: #C2C2C2;
+		}
+
+	#main-content {
+	background: white;
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	}
+ 
+	#main-content header,
+	#main-content .content {
+		padding: 40px;
+	}
+
+    #main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+	height: 60px;
+    }
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+  .carousel-item {
+  
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+   }
+
+	#carousel{
+	height: 200px;
+
+	width: 100%;
+	text-align: center; 
+	}
+	#main-header {
+		background: #333;
+		color: white;
+		height: 80px;
+		
+		width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+		left: 0; /* Posicionamos la cabecera al lado izquierdo */
+		top: 0; /* Posicionamos la cabecera pegada arriba */
+		position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Helvetica, Arial, sans-serif;
+		color: #666;
+		background: #f2f2f2; 
+		font-size: 1em;
+		line-height: 1.5em;
+		
+		padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+	}

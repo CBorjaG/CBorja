@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+ <!--form-->
+<div id="info">	    
+    <h1> Modificar Registro </h1>
+</div>
+	<form name="datos" action="" onsubmit="return validarFormulario()" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="txtid" id="txtid" value="{{ cliente.id }}">
+		<fieldset class="fieldset">
+            <div id="info">
+                <legend>Datos de contacto</legend>
+            </div>
+            <div class="form-row">
+               <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" autofocus value="{{ cliente.nombre }}">
+                </div>
+
+                 <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" autofocus value="{{ cliente.apellido }}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="correo">Correo</label>
+                    <input type="text" class="form-control" id="correo" name="correo" autofocus value="{{ cliente.email }}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="pais">Nacionalidad</label>
+                    <select name="pais" id="pais" class="form-control">
+                        <option value="">Elija...</option>
+
+                        {% for n in nacionalidad %}
+                            <option 
+                            {% if n.id == cliente.nacionalidad.id %}
+                            {{ 'selected' }}
+                            {% endif %}
+                            value="{{ n.id }}">{{ n.nombre }}</option>
+                        {% endfor %}
+
+                        <!--<option value="1">Chile</option>
+                        <option value="2">Argentina</option>
+                        <option value="3">Brasil</option>
+                        <option value="4">Uruguay</option>
+                        <option value="5">Peru</option>
+                        <option value="6">Mexico</option>-->
+                    </select>
+                </div>
+        </fieldset>
+		
+		<fieldset class="fieldset">
+	 	    <div id="info">
+             <legend>Acerca del tour</legend>
+            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="donde">Destino</label>
+                        <select name="donde" id="donde" class="form-control">
+                            <option value="">Elija...</option>
+                            
+                            {% for d in destino %}
+                            <option 
+                            {% if d.id == cliente.destino.id %}
+                            {{ 'selected' }}
+                            {% endif %}
+                            value="{{ d.id }}">{{ d.nombre }}</option>
+                            {% endfor %}
+
+                             <!--<option value="1">Filipinas, El nido</option>
+                            <option value="2">Corea Sur, Seoul</option>
+                            <option value="3">Tailandia, Bangkok</option>
+                            <option value="4">Taiwán, Taipéi</option>
+                            <option value="5">Japón, Tokio</option>
+                            <option value="6">China, Hong Kong</option>-->
+                        </select>
+                    </div>
+		
+                        <div class="form-group col-md-6">
+                            <label for="transporte">Transporte</label>
+                            <select name="transporte" id="transporte" class="form-control">
+                                <option value="">Elija...</option>
+
+                                {% for t in transporte %}
+                                <option 
+                                {% if t.id == cliente.transporte.id %}
+                                {{ 'selected' }}
+                                {% endif %}
+                                value="{{ t.id }}">{{ t.nombre }}</option>
+                                {% endfor %}
+
+                                <!-- <option value="1">Bus</option>
+                                <option value="2">Avión</option>
+                                <option value="3">Barco</option>-->
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6" class="input-group date" data-provide="datepicker" class="form-control">
+                            <label for="inicio">Inicio</label>
+                            <input type="date" class="form-control" id="inicio" name="inicio" value="{{ cliente.inicio}}">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                </div>
+
+            
+                <div class="form-group col-md-6" class="input-group date" data-provide="datepicker">
+                    <label for="fin">Fin</label>
+                    <input type="date" class="form-control" id="fin" name="fin" value="{{ cliente.fin }}">
+                    <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+                
+
+	    </fieldset>
+    	
+		<input type="submit" class="btn btn-light"value="Modificar">
+		<input type="reset" class="btn btn-light" value="Limpiar">
+	
+	</form>	
+    <h3>{{ mensaje }}</h3>
+</div>		
+{% endblock contenido %}

@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+	<!--article-->
+		<article>
+			<section class="main">
+				<h3>Tours Agency</h3><!--usar jquery-->
+				<p>
+					Tours Agency es una empresa dedicada a el turismo, principalmente para el continente asiático.
+					<br>
+				</p>
+				<iframe width="70%" height="315" src="https://www.youtube.com/embed/unroDFWSut0" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+			</section>
+		</article>
+
+		<!--aside-->
+		<aside>
+			<section id="derindex">
+							
+				<h3><img src="{% static 'core/img/bus.png' %}" align="left,center" width="20">Recorridos</h3>
+					<p>
+						Puedes realizar recorridos por toda una ciudad y conocer en terreno toda su cultura.
+						Proveemos de buses equipados para turistear.
+					</p>
+					<h3><img src="{% static 'core/img/plane.png' %}" align="left,center" width="20">Vuelos</h3>
+						<p>
+							Contamos con reserva de tickets de viaje para planificar el dia y hora de llegada a su nuevo destino.
+						</p>
+						<h3><img src="{% static 'core/img/boat.png' %}" align="left,center" width="20">Navega</h3>
+						<p>
+							Puedes navegar por el continente al reservar un recorrido vía marítima, así como también viajar de una ciudad a otra.
+						</p>
+						</a><br><!--<a href="{% url 'home' %}" class="leer-mas">Más Información-->
+			</section>
+		</aside>
+
+	
+ 
+{% endblock contenido %}
