@@ -1,4 +1,5 @@
 Proyecto Tours Agency
+------------------------------------------------------------------------
 Autor: Claudia Borja
 ->Credenciales Django Admin :
 Usuario: claudia
@@ -8,3 +9,11 @@ Usuario: prueba
 Contraseña: prueba1234
 ->Acceso entorno Virtual :
 port_tour>mytourvenv\Scripts\activate
+------------------------------------------------------------------------
+PythonAnywhere:
+https://touragency.pythonanywhere.com/
+Usuario: TourAgency
+Contraseña: python.tours
+->Credenciales /accounts/login/  :
+Usuario: prueba
+Contraseña: prueba1234
